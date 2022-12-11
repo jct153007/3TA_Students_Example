@@ -9,12 +9,12 @@ namespace DalTest // Note: actual namespace depends on the project name.
             DO.Student student = new DO.Student()
                 { 
                     BirthDate = new DateTime(1990, 1, 1),
-                    personalId = 2000000,
+                    PersonalId = 2000000,
                     StartYear = 2020,
                     Status = DO.StudentStatus.ACTIVE
                 };
             Dal.Student dalStudent = new Dal.Student();
-            dalStudent.AddStudent(student);
+            dalStudent.Add(student);
             Console.WriteLine("Hello World!");
         }
     }

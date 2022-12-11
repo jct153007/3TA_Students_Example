@@ -71,7 +71,7 @@ public static class DataSource
                 new DO.Student()
                 {
                     ID = Config.NextStudentId,
-                    personalId = random.Next(2000000, 3000000),
+                    PersonalId = random.Next(2000000, 3000000),
                     StartYear = random.Next(2020,2023),
                     Status = (StudentStatus)random.Next(5),
                     BirthDate = DateTime.Now - new TimeSpan(random.NextInt64(TimeSpan.TicksPerDay * 365L * 17L, TimeSpan.TicksPerDay * 365L * 35L)),
