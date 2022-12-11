@@ -22,7 +22,7 @@ public class Student
 	}
 	public List<DO.Student> GetAll()
 	{
-		return DataSource.students;
+		return DataSource.students.Select(student => student).ToList();
 	}
 
 	public DO.Student GetById(int id) 
