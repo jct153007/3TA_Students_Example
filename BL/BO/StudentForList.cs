@@ -1,7 +1,7 @@
 ﻿
 namespace BO;
 
-internal class StudentForList
+public class StudentForList
 {
     public int ID { get; set; }
     public int PersonalId { get; set; }
