@@ -1,8 +1,7 @@
 ﻿using BlApi;
 
-namespace BlImplementation
+namespace BlImplementation;
+
+internal class Grade : IGrade
 {
-    internal class Grade : IGrade
-    {
-    }
 }

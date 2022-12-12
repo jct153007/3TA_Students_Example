@@ -1,8 +1,7 @@
 ﻿using BlApi;
 
-namespace BlImplementation
+namespace BlImplementation;
+
+internal class Student : IStudent
 {
-    internal class Student : IStudent
-    {
-    }
 }

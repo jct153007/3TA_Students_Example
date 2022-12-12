@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+namespace BlApi;
 
-namespace BlApi
+public interface IBl
 {
-    internal interface IBl
-    {
-    }
+    IStudent Student { get; }
+    ICourse Course { get; }
+    IGrade Grade { get; }
 }

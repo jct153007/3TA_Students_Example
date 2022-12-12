@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using BlApi;
 
-namespace BlImplementation
+namespace BlImplementation;
+
+sealed public class Bl : IBl
 {
-    internal class Bl
-    {
-    }
+    public IStudent Student => new Student();
+
+    public ICourse Course => new Course();
+
+    public IGrade Grade => new Grade();
 }

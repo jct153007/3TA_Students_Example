@@ -1,6 +1,5 @@
-﻿namespace BlApi
+﻿namespace BlApi;
+
+public interface IStudent
 {
-    public interface IStudent
-    {
-    }
 }

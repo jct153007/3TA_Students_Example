@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace BO
+namespace BO;
+
+public class CourseForList
 {
-    internal class CourseForList
-    {
-    }
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public int Year { get; set; }
+    public Semester Semester { get; set; }
+    public override string ToString() => $@"
+        Course = {ID} {Semester} : {Name}";
 }
