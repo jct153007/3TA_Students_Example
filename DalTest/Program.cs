@@ -1,11 +1,13 @@
-﻿using System;
+﻿using DalApi;
+using System;
 
 namespace DalTest // Note: actual namespace depends on the project name.
 {
     internal class Program
-    {
+    { 
         static void Main(string[] args)
         {
+            IDal dal = new Dal.DalList();
             int choice = showMenu();
 
             DO.Student student = new DO.Student()
@@ -15,10 +17,10 @@ namespace DalTest // Note: actual namespace depends on the project name.
                 StartYear = 2020,
                 Status = DO.StudentStatus.ACTIVE
             };
-            Dal.Student dalStudent = new Dal.Student();
-            int newStudentID = dalStudent.Add(student);
+
+            int newStudentID = dal.Student.Add(student);   //dalStudent.Add(student);
             Console.WriteLine($"New Student ID : {newStudentID}" );
-            Console.WriteLine(student);
+            Console.WriteLine(dal.Student.GetById(student.PersonalId));
         }
 
         private static int showMenu()

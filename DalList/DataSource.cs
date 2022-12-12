@@ -16,6 +16,7 @@ public static class DataSource
         internal const int s_startStudentId = 1000;
         private static int s_nextStudentId = s_startStudentId;
         internal static int NextStudentId { get => s_nextStudentId++; }
+
         internal const int s_startGradeId = 1000;
         private static int s_nextGradeId = s_startGradeId;
         internal static int NextGradeId { get => s_nextGradeId++; }

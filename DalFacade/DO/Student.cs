@@ -11,6 +11,6 @@ public struct Student
     public StudentStatus Status { get; set; }
     public DateTime BirthDate { get; set;}
     public override string ToString() => $@"
-        Studnet = {ID} : {Name}";
+        Studnet = {ID} : Name =  {Name} Personal ID = {PersonalId}";
 }
 
