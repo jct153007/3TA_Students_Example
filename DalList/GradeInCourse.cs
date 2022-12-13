@@ -14,7 +14,7 @@ internal class GradeInCourse : IGrade
         throw new NotImplementedException();
     }
 
-    public IEnumerable<DO.GradeInCourse> GetAll()
+    public IEnumerable<DO.GradeInCourse?> GetAll(Func<DO.GradeInCourse?, bool>? filter = null)
     {
         throw new NotImplementedException();
     }

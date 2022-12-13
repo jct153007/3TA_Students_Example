@@ -1,5 +1,7 @@
 ﻿using DO;
 using DalApi;
+using System.Linq;
+
 namespace Dal;
 
 internal class Student : IStudent
@@ -21,13 +23,18 @@ internal class Student : IStudent
     {
 
     }
-    public IEnumerable<DO.Student> GetAll()
-    {
-        return DataSource.students.Select(student => student);
-    }
+
 
     public DO.Student GetById(int id)
     {
-        return DataSource.students.Find(student => student.PersonalId == id);
+        DO.Student? student = DataSource.students.FirstOrDefault(s => s?.PersonalId == id);
+        if (student == null)
+            throw new DalDoesNotExistException($"Student with PersonalId={id} does Not exist");
+        return student ?? new();
+    }
+
+    public IEnumerable<DO.Student?> GetAll(Func<DO.Student?, bool>? filter = null)
+    {
+        return DataSource.students.Select(student => student);
     }
 }

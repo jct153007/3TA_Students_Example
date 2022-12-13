@@ -14,7 +14,7 @@ internal class Course : ICourse
         throw new NotImplementedException();
     }
 
-    public IEnumerable<DO.Course> GetAll()
+    public IEnumerable<DO.Course?> GetAll(Func<DO.Course?, bool>? filter = null)
     {
         throw new NotImplementedException();
     }

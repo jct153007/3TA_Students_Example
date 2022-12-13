@@ -27,11 +27,11 @@ internal class Student : IStudent
         {
             students.Add(new BO.StudentForList()
             {
-                ID = student.ID,
-                Name = student.Name,
-                PersonalId = student.PersonalId,
-                StartYear = student.StartYear,
-                Status = (BO.StudentStatus)student.Status,                
+                ID = student?.ID ?? 0 ,
+                Name = student?.Name ?? "",
+                PersonalId = student?.PersonalId ?? 0,
+                StartYear = student?.StartYear ?? 0,
+                Status = (BO.StudentStatus)student?.Status,                
             });
         }
         return students;

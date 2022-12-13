@@ -7,9 +7,9 @@ public static class DataSource
 {
     static readonly Random random= new Random();
 
-    internal static List<DO.Student> students = new List<DO.Student>();
-    internal static List<DO.Course> courses = new List<DO.Course>();
-    internal static List<DO.GradeInCourse> grades = new List<DO.GradeInCourse>();
+    internal static List<DO.Student?> students = new List<DO.Student?>();
+    internal static List<DO.Course?> courses = new List<DO.Course?>();
+    internal static List<DO.GradeInCourse?> grades = new List<DO.GradeInCourse?>();
 
     internal static class Config
     {
@@ -42,10 +42,10 @@ public static class DataSource
                 new DO.GradeInCourse()
                 {
                     ID = Config.NextGradeId,
-                    StudentID = students[random.Next(students.Count)].ID,
-                    CoruseID = courses[random.Next(courses.Count)].ID,
+                    StudentID = ((DO.Student)students[random.Next(students.Count)]!).ID,
+                    CoruseID = ((DO.Course)courses[random.Next(courses.Count)]!).ID,
                     Grade = random.Next(40, 101)
-                });
+                }) ;
         }
 
     }

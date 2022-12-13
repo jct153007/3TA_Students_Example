@@ -1,6 +1,6 @@
 ﻿using DO;
 namespace DalApi;
 
-public interface IStudent : ICrud<Student>
+public interface IStudent : ICrud<DO.Student>
 {
 }
