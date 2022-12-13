@@ -6,4 +6,3 @@
 ## BO Entities 
 [Entities Diagram](https://dbdiagram.io/d/6397385b99cb1f3b55a0d5a2)
 
-https://dbdiagram.io/d/6397385b99cb1f3b55a0d5a2
