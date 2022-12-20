@@ -20,7 +20,7 @@
             <Label Grid.Column="0" Content="Status :" FontSize="20"/>
             <ComboBox Name="StatusSelector" HorizontalAlignment= "Stretch" VerticalAlignment="Stretch" Grid.Column="1" />
         </Grid>
-        <ListView x:Name="StudentListview" Grid.Row="1"/>
+        <ListView x:Name="StudentsListview" Grid.Row="1"/>
     </Grid>
 
 </Window>
