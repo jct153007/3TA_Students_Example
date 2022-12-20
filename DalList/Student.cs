@@ -35,6 +35,9 @@ internal class Student : IStudent
 
     public IEnumerable<DO.Student?> GetAll(Func<DO.Student?, bool>? filter = null)
     {
-        return DataSource.students.Select(student => student);
+        if (filter == null)
+            return DataSource.students.Select(student => student);
+        else
+            return DataSource.students.Where(student => filter(student));
     }
 }

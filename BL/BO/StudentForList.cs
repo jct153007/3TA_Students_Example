@@ -9,5 +9,5 @@ public class StudentForList
     public int StartYear { get; set; }
     public StudentStatus Status { get; set; }
     public override string ToString() => $@"
-        Studnet = {ID} : Name =  {Name} Personal ID = {PersonalId}";
+        Studnet = {ID} : Name =  {Name} Personal ID = {PersonalId} Status = {Status}";
 }

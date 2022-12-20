@@ -25,7 +25,14 @@ namespace PL.Students
         public StudentListWindow()
         {
             InitializeComponent();
+            StatusSelector.ItemsSource = Enum.GetValues(typeof(BO.StudentStatus));
             StudentsListview.ItemsSource = bl.Student.GetAll();
+        }
+
+        private void StatusSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            BO.StudentStatus status = (BO.StudentStatus)e.AddedItems[0];
+            StudentsListview.ItemsSource = bl.Student.GetStudentsByStatus(status);
         }
     }
 }

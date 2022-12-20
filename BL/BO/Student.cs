@@ -12,5 +12,5 @@ public class Student
     public DateTime BirthDate { get; set; }
     public List<CourseStudent> Courses { get; set; }
     public override string ToString() => $@"
-        Studnet = {ID} : Name =  {Name} Personal ID = {PersonalId}";
+        Studnet = {ID} : Name =  {Name} Personal ID = {PersonalId} Status = {Status}";
 }

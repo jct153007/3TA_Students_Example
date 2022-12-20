@@ -1,4 +1,5 @@
 ﻿using BlApi;
+using BO;
 
 namespace BlImplementation;
 
@@ -35,5 +36,30 @@ internal class Student : IStudent
             });
         }
         return students;
+    }
+
+    public BO.Student GetById(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public IEnumerable<StudentForList> GetStudentsByStatus(StudentStatus status)
+    {
+        //  without Linq
+        List<BO.StudentForList> students = new List<BO.StudentForList>();
+        var studentsDO = dal.Student.GetAll(student => student?.Status == (DO.StudentStatus)status);
+        foreach (var student in studentsDO)
+        {
+            students.Add(new BO.StudentForList()
+            {
+                ID = student?.ID ?? 0,
+                Name = student?.Name ?? "",
+                PersonalId = student?.PersonalId ?? 0,
+                StartYear = student?.StartYear ?? 0,
+                Status = (BO.StudentStatus)student?.Status,
+            });
+        }
+        return students;
+
     }
 }
