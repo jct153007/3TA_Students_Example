@@ -34,5 +34,8 @@ namespace PL.Students
             BO.StudentStatus status = (BO.StudentStatus)e.AddedItems[0];
             StudentsListview.ItemsSource = bl.Student.GetStudentsByStatus(status);
         }
+
+        private void AddStudentButton_Click(object sender, RoutedEventArgs e) => new StudentWindow().Show();
+        
     }
 }

@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="StudentWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Personal Id :" Grid.Column ="0" Grid.Row="0"/>
+                <TextBlock Text="Student Name :" Grid.Column ="0" Grid.Row="1"/>
+                <TextBlock Text="Start Year :" Grid.Column ="0" Grid.Row="2"/>
+                <TextBlock Text="Status :" Grid.Column ="0" Grid.Row="3"/>
+                <TextBlock Text="Birth Date :" Grid.Column ="0" Grid.Row="4"/>
+
+                <TextBox x:Name="PersonalId_TextBox" Text="Personal Id" Grid.Column ="1" Grid.Row="0"/>
+                <TextBox x:Name="StudentName_TextBox" Text="Student Name" Grid.Column ="1" Grid.Row="1"/>
+                <TextBox x:Name="StartYear_TextBox" Text="Start Year" Grid.Column ="1" Grid.Row="2"/>
+                <ComboBox x:Name="Status_ComboBox" Text="Status" Grid.Column ="1" Grid.Row="3"/>
+                <DatePickerTextBox x:Name="BirthDate_TextBox"  Grid.Column ="1" Grid.Row="4"/>
+            </Grid>
+            <Button x:Name="AddStudentButton" Content="Add" Click="AddStudentButton_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -66,7 +66,7 @@ public static class DataSource
 
     private static void createStudents()
     {
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 100; i++)
         {
             students.Add(
                 new DO.Student()

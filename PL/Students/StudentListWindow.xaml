@@ -21,6 +21,7 @@
             <ComboBox Name="StatusSelector" HorizontalAlignment= "Stretch" VerticalAlignment="Stretch" Grid.Column="1" SelectionChanged="StatusSelector_SelectionChanged" />
         </Grid>
         <ListView x:Name="StudentsListview" Grid.Row="1"/>
+        <Button x:Name="AddStudentButton" Content="Add Student" Grid.Row="2" Click="AddStudentButton_Click"/>
     </Grid>
 
 </Window>
